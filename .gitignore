@@ -1,6 +1,5 @@
 venv/
-# data/
 __pycache__/
 # BOAs usados apenas para testes locais
-data/boa*.pdf/
+data/boa*.pdf
 
