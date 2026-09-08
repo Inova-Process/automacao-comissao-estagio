@@ -94,3 +94,91 @@ automacao-comissao-estagio/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+
+```
+
+---
+
+## Executando localmente
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/Inova-Process/automacao-comissao-estagio.git
+cd automacao-comissao-estagio
+```
+
+### 2. Crie um ambiente virtual
+
+```bash
+python3 -m venv venv
+```
+
+### 3. Ative o ambiente virtual
+
+No Linux/macOS:
+
+```bash
+source venv/bin/activate
+```
+
+No Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+### 4. Instale as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Execute a aplicação
+
+```bash
+streamlit run src/app.py
+```
+
+A aplicação será disponibilizada localmente pelo Streamlit, normalmente em:
+
+```text
+http://localhost:8501
+```
+
+---
+
+## Privacidade
+
+Os Boletins de Orientação Acadêmica (BOAs) utilizados pela aplicação contêm informações acadêmicas pessoais.
+
+Por esse motivo:
+
+- arquivos de BOA não devem ser adicionados ao repositório;
+- os documentos enviados devem ser utilizados somente durante o processamento necessário para a análise;
+- dados acadêmicos reais não devem ser utilizados como arquivos públicos de teste.
+
+---
+
+## Status do projeto
+
+🚧 **Em desenvolvimento**
+
+O sistema continua sendo aprimorado com novas validações, melhorias na extração das informações do BOA e ajustes na interface.
+
+---
+
+## Contribuidores
+
+- [Bernardo Magno](https://github.com/bemagnodev)
+- [Felipe Rivetti](https://github.com/feliperivetti)
+- [Ryan Braga Loureiro](https://github.com/ryanbragaloureiro)
+- [Bernardo Domingos Maia]
+- [Ryan Dias Amancio Beserra]
+- [Joao Miguel Sales De Alencar]
+
+---
+
+## Projeto de extensão InovaProcess
+
+Este projeto faz parte das iniciativas do **InovaProcess**, projeto de extensão voltado à melhoria e automação de processos institucionais da UFRJ.
