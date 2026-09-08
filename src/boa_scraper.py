@@ -101,6 +101,35 @@ def extract_required_courses(page_text: str) -> Set[str]:
             
     return required_set
 
+def extract_required_course_names(page_text: str) -> Dict[str, str]:
+    """
+    Extrai o código e o nome das disciplinas obrigatórias
+    dos períodos 1 a 4.
+
+    Exemplo:
+    {
+        "ICP115": "Computação I",
+        "MAE125": "Álgebra Linear"
+    }
+    """
+    codes_to_exclude = {"ICPZ55", "ICPX06"}
+
+    required_pattern = (
+        r"^((?:ICP|MAE|MAD|ICPX|ICPZ)\w+)\s+"
+        r"(.+?)\s+"
+        r"(?:\d+\.\d|NCC)\s+\d+\s+([1-4])"
+    )
+
+    course_names = {}
+
+    matches = re.findall(required_pattern, page_text, re.MULTILINE)
+
+    for code, name, period in matches:
+        code = code.upper()
+        if code not in codes_to_exclude:
+            course_names[code] = name.strip()
+    return course_names
+
 
 def extract_approved_courses(page_text: str) -> Set[str]:
     """
@@ -156,7 +185,7 @@ def analyze_course_completion(file_path: str) -> Dict[str, Any]:
 
             # Step 1: Extract required courses
             required = extract_required_courses(page_1_text)
-            
+            course_names = extract_required_course_names(page_1_text)
             # Step 2: Extract approved courses
             approved = extract_approved_courses(page_1_text)
 
@@ -169,6 +198,7 @@ def analyze_course_completion(file_path: str) -> Dict[str, Any]:
             final_report = {
                 "materias_necessarias_periodo4": sorted(list(required)),
                 "materias_aprovadas": sorted(list(approved)),
+                "nomes_materias": course_names,
                 "status": completion_status
             }
 
