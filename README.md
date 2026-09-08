@@ -1,5 +1,4 @@
 # Projeto de Automação da Comissão de Estágio - IC/UFRJ
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 
 ---
 
