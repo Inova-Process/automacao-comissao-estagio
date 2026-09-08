@@ -5,8 +5,6 @@
 ### Visão Geral
 Ferramenta de automação em **Python** para otimizar a verificação de documentos da Comissão de Estágio do Instituto de Computação (IC) da UFRJ. O objetivo é reduzir o trabalho manual e agilizar a pré-análise e aprovação de alunos, como parte do projeto de extensão **InovaProcess**.
 
-*Este repositório é um fork do [projeto original](https://github.com/Inova-Process/automacao-comissao-estagio), onde sou um contribuidor ativo.*
-
 ### O Problema
 O processo atual de aprovação de estágios é manual, lento e propenso a gargalos. Os principais desafios são:
 * **Prazos Rígidos:** Submissão de documentação com prazos rigorosos para os alunos.
