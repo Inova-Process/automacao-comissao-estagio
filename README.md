@@ -36,3 +36,4 @@ Como um dos desenvolvedores do projeto, minhas responsabilidades atuais incluem:
 ### Contribuidores
 * [Bernardo Magno](https://github.com/bemagnodev)
 * [Felipe Rivetti](https://github.com/feliperivetti)
+* [Ryan Braga Loureiro](https://github.com/ryanbragaloureiro)
